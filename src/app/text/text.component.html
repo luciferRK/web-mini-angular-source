@@ -1,0 +1,34 @@
+<div class="whole">
+    <div class="row">
+        <!-- <span>Type the Content and Save</span> -->
+        <div class="highz link card card-small" (click)="update()">
+            <span>{{saveStatus}}</span>
+        </div>
+        <div class="link card card-medium" (click)="newOne()">
+            <span>Create New Link</span>
+        </div>
+    </div>
+
+    <div *ngIf="linkPresentPass" [@enterAnimationPassword] class="popPass">
+        <label for="password">Enter Password</label><br>
+        <input type="password" name="password" [(ngModel)]="pass" placeholder="Password"><br>
+        <button class="invert link" (click)="checkAuth()">Get it</button>
+        <div *ngIf="wrongPassword" class="error">Wrong Password</div>
+    </div>
+
+    <div *ngIf="createLinkBool" [@enterAnimation] class="createLink" #createLinkClass>
+        <div>
+            <label for="createpassword">Create Password</label>
+            <div (click)="closeCreate()">x</div>
+        </div>
+        <br/>
+        <input type="password" name="createpassword" [(ngModel)]="cpass" placeholder="Password"><br>
+        <input type="password" name="createpasswordConfirm" [(ngModel)]="cpassc" placeholder="Confirm Password"><br>
+        <button class="invert link" (click)="createLink()">Create</button>
+        <div *ngIf="noMatchPassword" class="error">Passwords Don't Match</div>
+    </div>
+
+    <div class="content">
+        <textarea [ngStyle]="{'font-size': fontSize }" [disabled]="createLinkBool || linkPresentPass" [(ngModel)]="content" (keydown)="checkValues()" ></textarea>
+    </div>
+</div>

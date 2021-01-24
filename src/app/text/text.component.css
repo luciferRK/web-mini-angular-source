@@ -1,0 +1,254 @@
+.whole{
+    display: flex;
+    flex-direction: column;
+    z-index:10;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.content {
+    display: flex;
+    margin: 2.5em auto 0px;
+    padding: 0em 16px;
+    max-width: 940px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row{
+    padding-left:65%;
+    color:black;
+    display:flex;
+    flex-direction: row;
+    margin:1em;
+    margin-top:2em;
+}
+
+.row>span{
+    color:white;
+    font-size:25px;
+}
+
+.card {
+    border-radius: 4px;
+    border: 1px solid #eee;
+    background-color: #fafafa;
+    height: 40px;
+    width: 200px;
+    margin: 0 8px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+  }
+
+.card.card-small{
+    height: 13px;
+    width: 70px;
+}
+
+.card.card-medium{
+    height:13px;
+    width:130px;
+}
+
+textarea{
+    outline:none;
+    padding:1em;
+    resize: none;
+    width: 80em;
+    height:40em;
+}
+
+.link{
+    cursor:pointer;
+}
+
+.createLink{
+    display:flex;
+    flex-direction: column;
+    width:15%;
+    height:25%;
+    background-color: black;
+    top:35%;
+    left:40%;
+    position:absolute;
+    z-index:999999;
+    padding:2em;
+    font-size: 20px;
+}
+
+.createLink>input{
+    width:14em;
+    outline:none;
+    padding:0.2em;
+}
+
+.createLink>div{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.createLink>div>div{
+    cursor: pointer;
+    padding-bottom:5px;
+}
+
+.createLink>button{
+    padding:0.3em 0.3em 0.5em;
+    width:30%;
+    text-align: center;
+    border-radius: 10%;
+    font-size: 15px;
+    font-size: bold;
+    outline:none;
+}
+
+.popPass{
+    display:flex;
+    flex-direction: column;
+    width:15%;
+    height:20%;
+    background-color: black;
+    top:37%;
+    left:40%;
+    position:absolute;
+    z-index:999999;
+    padding:2em;
+    font-size: 20px;
+}
+
+.popPass>input{
+    width:14em;
+    outline:none;
+    padding:0.2em;
+}
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+
+.popPass>button{
+    padding:0.3em 0.5em 0.5em;
+    width:30%;
+    text-align: center;
+    border-radius: 10%;
+    font-size: 15px;
+    font-size: bold;
+    outline:none;
+}
+
+.invert{
+    background-color: white;
+    color:black;
+}
+
+.highz{
+    z-index:99999;
+}
+
+div.error{
+    padding-top:2px;
+    color:rgb(255, 53, 53)
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .row{
+        padding-left: 20%;
+        display:flex;
+        flex-direction: row;
+        float:right;
+    }
+
+    .row>span{
+        color:white;
+        font-size:14px;
+        font-weight:bolder;
+    }
+
+    .content {
+        margin: 1em auto 0px;
+    }
+
+    .card.card-small{
+        height: 10px;
+        width: 60px;
+    }
+    
+    .card.card-medium{
+        height:10px;
+        width:115px;
+    }
+
+    textarea{
+        width: 25em;
+        height:40em;
+    }
+
+    .createLink{
+        display:flex;
+        flex-direction: column;
+        width:45%;
+        height:25%;
+        background-color: black;
+        top:35%;
+        left:18%;
+        position:absolute;
+        z-index:999999;
+        padding:2em;
+        font-size: 20px;
+    }
+    
+    .createLink>input{
+        width:12em;
+        outline:none;
+        padding:0.2em;
+    }
+    
+    .createLink>button{
+        padding:0.3em 0.5em 0.5em;
+        width:50%;
+        text-align: center;
+        border-radius: 10%;
+        font-size: 15px;
+        font-size: bold;
+        outline:none;
+    }
+    
+    .popPass{
+        display:flex;
+        flex-direction: column;
+        width:45%;
+        height:20%;
+        background-color: black;
+        top:37%;
+        left:18%;
+        position:absolute;
+        z-index:999999;
+        padding:2em;
+        font-size: 20px;
+    }
+    
+    .popPass>input{
+        width:13em;
+        outline:none;
+        padding:0.2em;
+    }
+    
+    .popPass>button{
+        padding:0.3em 0.5em 0.5em;
+        width:50%;
+        text-align: center;
+        border-radius: 10%;
+        font-size: 15px;
+        font-size: bold;
+        outline:none;
+    }
+
+}
